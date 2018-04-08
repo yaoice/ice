@@ -1,7 +1,7 @@
 // @APIVersion 1.0.0
 // @Title Ice API
 // @Description Ice is an k8s api proxy
-// @Contact xiabingyao@tencent.com
+// @Contact yao3690093@gmail.com
 // @License Apache 2.0
 // @LicenseUrl http://www.apache.org/licenses/LICENSE-2.0.html
 package routers
