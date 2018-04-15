@@ -9,82 +9,82 @@ func init() {
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
+			Method:           "Post",
+			Router:           `/`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"],
 		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
+			Method:           "GetAll",
+			Router:           `/`,
 			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:appName`,
+			Method:           "Get",
+			Router:           `/:appName`,
 			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:AppsController"],
 		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:appName`,
+			Method:           "Delete",
+			Router:           `/:appName`,
 			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:IngressesController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:IngressesController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
+			Method:           "Post",
+			Router:           `/`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:IngressesController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:IngressesController"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:ingressName`,
+			Method:           "Get",
+			Router:           `/:ingressName`,
 			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:IngressesController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:IngressesController"],
 		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:ingressName`,
+			Method:           "Delete",
+			Router:           `/:ingressName`,
 			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:ServicesController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:ServicesController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
+			Method:           "Post",
+			Router:           `/`,
 			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:ServicesController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:ServicesController"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:serviceName`,
+			Method:           "Get",
+			Router:           `/:serviceName`,
 			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 	beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:ServicesController"] = append(beego.GlobalControllerRouter["github.com/yaoice/ice/controllers:ServicesController"],
 		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:serviceName`,
+			Method:           "Delete",
+			Router:           `/:serviceName`,
 			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
+			MethodParams:     param.Make(),
+			Params:           nil})
 
 }

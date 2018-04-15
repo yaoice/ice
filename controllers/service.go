@@ -1,16 +1,16 @@
 package controllers
 
 import (
-    "github.com/yaoice/ice/models"
-    "encoding/json"
-    "github.com/astaxie/beego"
-    "github.com/astaxie/beego/logs"
-    "fmt"
+	"encoding/json"
+	"fmt"
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
+	"github.com/yaoice/ice/models"
 )
 
 // Operations about service
 type ServicesController struct {
-     beego.Controller
+	beego.Controller
 }
 
 // @Title Create
@@ -21,18 +21,18 @@ type ServicesController struct {
 // @Failure 400 :body is empty
 // @router / [post]
 func (this *ServicesController) Post() {
-    var service models.Service
-    project := this.GetString(":project")
-    json.Unmarshal(this.Ctx.Input.RequestBody, &service)
-    result, err := models.CreateService(project, &service)
-    if err != nil {
-        logs.Error("create service %s response err: %v", service.AppName, err)
-        this.Ctx.Output.SetStatus(400)
-        this.Data["json"] = err
-    } else {
-        this.Data["json"] = result
-    }
-    this.ServeJSON()
+	var service models.Service
+	project := this.GetString(":project")
+	json.Unmarshal(this.Ctx.Input.RequestBody, &service)
+	result, err := models.CreateService(project, &service)
+	if err != nil {
+		logs.Error("create service %s response err: %v", service.AppName, err)
+		this.Ctx.Output.SetStatus(400)
+		this.Data["json"] = err
+	} else {
+		this.Data["json"] = result
+	}
+	this.ServeJSON()
 }
 
 // @Title Get
@@ -43,17 +43,17 @@ func (this *ServicesController) Post() {
 // @Failure 400 :serviceName is empty
 // @router /:serviceName [get]
 func (this *ServicesController) Get() {
-    project := this.GetString(":project")
-    serviceName := this.GetString(":serviceName")
-    service, err := models.GetService(project, serviceName)
-    if err != nil {
-        logs.Error("get service %s response err: %v", serviceName, err)
-        this.Ctx.Output.SetStatus(400)
-        this.Data["json"] = err
-    } else {
-        this.Data["json"] = service
-    }
-    this.ServeJSON()
+	project := this.GetString(":project")
+	serviceName := this.GetString(":serviceName")
+	service, err := models.GetService(project, serviceName)
+	if err != nil {
+		logs.Error("get service %s response err: %v", serviceName, err)
+		this.Ctx.Output.SetStatus(400)
+		this.Data["json"] = err
+	} else {
+		this.Data["json"] = service
+	}
+	this.ServeJSON()
 }
 
 // @Title Delete
@@ -64,17 +64,16 @@ func (this *ServicesController) Get() {
 // @Failure 400 :serviceName is empty
 // @router /:serviceName [delete]
 func (this *ServicesController) Delete() {
-    project := this.GetString(":project")
-    serviceName := this.GetString(":serviceName")
-    err := models.DeleteService(project, serviceName)
-    if err != nil {
-        logs.Error("delete service %s response err: %v", serviceName, err)
-        this.Ctx.Output.SetStatus(400)
-        this.Data["json"] = err
-    } else {
-        s := fmt.Sprintf("delete service %s success!", serviceName)
-        this.Data["json"] = s
-    }
-    this.ServeJSON()
+	project := this.GetString(":project")
+	serviceName := this.GetString(":serviceName")
+	err := models.DeleteService(project, serviceName)
+	if err != nil {
+		logs.Error("delete service %s response err: %v", serviceName, err)
+		this.Ctx.Output.SetStatus(400)
+		this.Data["json"] = err
+	} else {
+		s := fmt.Sprintf("delete service %s success!", serviceName)
+		this.Data["json"] = s
+	}
+	this.ServeJSON()
 }
-

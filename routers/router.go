@@ -14,36 +14,36 @@ import (
 
 func init() {
 	ns := beego.NewNamespace("/apis/v1",
-       beego.NSNamespace("/projects",
-            beego.NSInclude(
-                &controllers.ProjectsController{},
-            ),
-        ),
-        beego.NSNamespace("/projects/:project/apps",
+		beego.NSNamespace("/projects",
+			beego.NSInclude(
+				&controllers.ProjectsController{},
+			),
+		),
+		beego.NSNamespace("/projects/:project/apps",
 			beego.NSInclude(
 				&controllers.AppsController{},
 			),
 		),
-        beego.NSNamespace("/projects/:project/ingresses",
-            beego.NSInclude(
-                &controllers.IngressesController{},
-            ),
-        ),
-        beego.NSNamespace("/projects/:project/services",
-            beego.NSInclude(
-                &controllers.ServicesController{},
-            ),
-        ),
-        beego.NSNamespace("/flavors",
-            beego.NSInclude(
-                &controllers.FlavorsController{},
-            ),
-        ),
-        beego.NSNamespace("/images",
-            beego.NSInclude(
-                &controllers.ImagesController{},
-            ),
-        ),
+		beego.NSNamespace("/projects/:project/ingresses",
+			beego.NSInclude(
+				&controllers.IngressesController{},
+			),
+		),
+		beego.NSNamespace("/projects/:project/services",
+			beego.NSInclude(
+				&controllers.ServicesController{},
+			),
+		),
+		beego.NSNamespace("/flavors",
+			beego.NSInclude(
+				&controllers.FlavorsController{},
+			),
+		),
+		beego.NSNamespace("/images",
+			beego.NSInclude(
+				&controllers.ImagesController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }

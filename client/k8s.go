@@ -1,9 +1,9 @@
 package client
 
 import (
-    "k8s.io/client-go/tools/clientcmd"
-    "k8s.io/client-go/kubernetes"
-    "flag"
+	"flag"
+	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/tools/clientcmd"
 )
 
 func NewK8sClient() *kubernetes.Clientset {
@@ -20,7 +20,7 @@ func NewK8sClient() *kubernetes.Clientset {
 		panic(err)
 	}
 
-    return clientset
+	return clientset
 }
 
 var K8sDefaultClient = NewK8sClient()
